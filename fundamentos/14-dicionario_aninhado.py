@@ -21,6 +21,7 @@ pp = pprint.PrettyPrinter(depth=4)
 pp.pprint(filmsDict)
 
 # 1 - Buscar uma informação dentro de um dicionário aninhado
+print('-' * 50)
 print(filmsDict["interstellar"]["genre"])
 
 # 2 - Adicionar novo item

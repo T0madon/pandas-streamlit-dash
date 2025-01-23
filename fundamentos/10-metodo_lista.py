@@ -19,6 +19,7 @@ print(filmsList)
 filmsCopy = filmsList.copy()
 filmsCopy.remove("Pulp Fiction")
 print(filmsCopy)
+print(filmsList, 'add')
 
 # 6 - Remove todos os itens da lista
 filmsList.clear()

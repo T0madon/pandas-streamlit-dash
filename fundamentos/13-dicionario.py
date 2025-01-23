@@ -19,7 +19,9 @@ print(filmInception.keys())
 print(filmInception.values())
 
 # 4 - Buscar itens do dicionário com chave e valor
-print(filmInception.items())
+print(filmInception.items(), 'mudei')
+for indice, value in filmInception.items():
+    print(indice, value)
 
 # 5 - Adicionar itens no dicionário
 filmInception["director"] = "Christopher Nolan"

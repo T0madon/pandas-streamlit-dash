@@ -1,4 +1,4 @@
-# 1 - Listando valores de 0 a 10 que sejam menores do que 4
+# 1 - Listando valores de 0 a 9 que sejam menores do que 4
 listNumbers = [i for i in range(10) if i < 4]
 print(listNumbers)
 

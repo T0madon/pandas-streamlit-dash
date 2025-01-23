@@ -22,5 +22,7 @@ print(movieName[::2])
 # 5 - Buscar toda a string nos índices ímpares
 print(movieName[1::2])
 
+print(movieName[0:3:2], 'teste')
+
 # 6 - Inverter uma string de trás pra frente
 print(movieName[::-1])
