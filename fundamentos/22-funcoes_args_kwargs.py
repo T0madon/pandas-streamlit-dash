@@ -20,6 +20,7 @@ sum(7,10,9,8,7,6)
 def presentation(**data):
     for key, value in data.items():
         print(f"{key} - {value}")
+        
 print("Lista de Cursos:")
 presentation(name="Python", category="Backend", level="Iniciante")
 presentation(name="Visão Computacional com Python", category="IA", level="Avançado")
