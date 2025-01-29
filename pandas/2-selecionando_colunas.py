@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
+from pathlib import Path
 
-caminho_arquivo = "datasets/compras.csv"
+caminho_arquivo = caminho_compras = Path(__file__).parent / 'datasets/compras.csv'
 
 df_compras = pd.read_csv(caminho_arquivo, sep=";", decimal=",", index_col=0)
 

@@ -1,8 +1,9 @@
 from datetime import datetime
 import streamlit as st
 import pandas as pd
+from pathlib import Path
 
-caminho_datasets = "datasets"
+caminho_datasets = Path(__file__).parent / 'datasets'
 
 df_compras = pd.read_csv(f"{caminho_datasets}/compras.csv", sep=";", decimal=",", index_col=0)
 df_lojas = pd.read_csv(f"{caminho_datasets}/lojas.csv", sep=";", decimal=",")
