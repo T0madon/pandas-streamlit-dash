@@ -25,3 +25,11 @@ df_rec_mensal = df.set_index('Data da Compra').groupby(
 df_rec_mensal['Ano'] = df_rec_mensal['Data da Compra'].dt.year
 df_rec_mensal['Mes'] = df_rec_mensal['Data da Compra'].dt.month_name()
 
+# 3 - Df de receitas por categoria
+df_rec_categoria = df.groupby('Categoria do Produto')[
+    ['Preço']].sum().sort_values('Preço', ascending=False)
+
+# 4 - Df vendedores
+df_vendedores = pd.DataFrame(df.groupby('Vendedor')['Preço'].agg(
+    ['sum', 'count']
+))
