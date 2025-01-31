@@ -1,5 +1,7 @@
 from dataset import df
 import pandas as pd
+import streamlit as st
+import time
 
 def format_number(value, prefix = ''):
     for unit in ['', 'mil']:
@@ -33,3 +35,13 @@ df_rec_categoria = df.groupby('Categoria do Produto')[
 df_vendedores = pd.DataFrame(df.groupby('Vendedor')['Preço'].agg(
     ['sum', 'count']
 ))
+
+# Função p/ converter arquivo CSV
+@st.cache_data
+def convert_csv(df):
+    return df.to_csv(index=False).encode('utf-8')
+
+def mensagem_sucesso():
+    success = st.success('Download feito com sucesso!')
+    time.sleep(2)
+    success.empty()
