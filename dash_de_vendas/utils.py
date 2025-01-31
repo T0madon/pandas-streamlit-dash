@@ -25,4 +25,3 @@ df_rec_mensal = df.set_index('Data da Compra').groupby(
 df_rec_mensal['Ano'] = df_rec_mensal['Data da Compra'].dt.year
 df_rec_mensal['Mes'] = df_rec_mensal['Data da Compra'].dt.month_name()
 
-print(df_rec_mensal)
